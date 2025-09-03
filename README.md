@@ -74,3 +74,23 @@ This project demonstrates a complete CI/CD pipeline deployed on AWS EC2, using J
 - Deploy war/jar files via Jenkins.
 - Secure Tomcat with strong credentials.
 
+workflow:
+1.Lauch aws ec2 instances 
+2.Install jenkins on ec2 and run jenkins on it.
+3.Login to jenkins and write jenkinsfile for all the tools like maven,nexus,tomcat,sonarqube
+4.Install required plugins from manage jenkins
+5.pull the source code from github to jenkins and build the pipeline ,for that we need maven .Maven tool helps to build the pipeline and generate war file for the application .
+6.we store this war file  which is artifact in nexus 
+7.we check the code quality analysis (CQA) using sonarqube 
+8.we then deploy the application to app-server which is tomcat 
+9.we access the webapp from http://16.171.12.225:8080 
+
+-pipeline flow:
+.code-build-CQA-artifacts-deploy
+
+
+
+
+
+
+
