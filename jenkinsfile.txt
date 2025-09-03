@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+    tools{
+        maven 'mymaven'
+    }
+    stages {
+        stage('code') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Manojnalla-gh/ci-cd-jenkins-project.git'
+            }
+        }
+        stage('build'){
+            steps{
+                sh 'mvn clean package'
+            }
+        }
+        stage('delpoy'){
+            steps{
+            deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'f9a3be39-218d-4424-9a84-bf014d7556b0', path: '', url: 'http://16.171.12.225:8080')], contextPath: 'webapp', war: 'target/*.war'
+            }
+        }
+    }
+}
+
+
+
+
