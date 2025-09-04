@@ -87,6 +87,10 @@ workflow:
 
 -pipeline flow:
 .code-build-CQA-artifacts-deploy
+<img width="1440" height="900" alt="Screenshot 2025-09-03 at 12 54 38 AM" src="https://github.com/user-attachments/assets/bca0fca8-ef39-4acc-a82c-9749472b927d" />
+
+
+
 
 
 
